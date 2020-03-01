@@ -22,7 +22,7 @@
 
   <meta name="description" content="&amp;emsp;&amp;emsp;在搭建博客的过程中开始真正接触到git这一强大的工具，也就很快对其产生了好奇心。于是写一篇博客来记录自己学习git和github的过程。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github 初体验">
+<meta property="og:title" content="Git&amp;GitHub初体验">
 <meta property="og:url" content="http://yoursite.com/2020/02/28/Github_first_try/index.html">
 <meta property="og:site_name" content="Birdie">
 <meta property="og:description" content="&amp;emsp;&amp;emsp;在搭建博客的过程中开始真正接触到git这一强大的工具，也就很快对其产生了好奇心。于是写一篇博客来记录自己学习git和github的过程。">
@@ -30,14 +30,14 @@
 <meta property="og:image" content="http://yoursite.com/images/git_version.png">
 <meta property="og:image" content="http://yoursite.com/images/git_init.png">
 <meta property="og:image" content="http://yoursite.com/images/git_folder.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/28/images/github_new_repo.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/28/images/github_create_repo.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/28/images/GitHubTest_repo.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/28/images/git_remote.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/28/images/git_push.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/28/images/github_check.png">
+<meta property="og:image" content="http://yoursite.com/images/github_new_repo.png">
+<meta property="og:image" content="http://yoursite.com/images/github_create_repo.png">
+<meta property="og:image" content="http://yoursite.com/images/GitHubTest_repo.png">
+<meta property="og:image" content="http://yoursite.com/images/git_remote.png">
+<meta property="og:image" content="http://yoursite.com/images/git_push.png">
+<meta property="og:image" content="http://yoursite.com/images/github_check.png">
 <meta property="article:published_time" content="2020-02-28T07:18:31.000Z">
-<meta property="article:modified_time" content="2020-03-01T15:24:59.701Z">
+<meta property="article:modified_time" content="2020-03-01T15:29:01.293Z">
 <meta property="article:author" content="Rain Chen">
 <meta property="article:tag" content="github">
 <meta property="article:tag" content="learning">
@@ -56,7 +56,7 @@
   };
 </script>
 
-  <title>Github 初体验 | Birdie</title>
+  <title>Git&GitHub初体验 | Birdie</title>
   
 
 
@@ -221,7 +221,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          Github 初体验
+          Git&GitHub初体验
         </h2>
 
         <div class="post-meta">
@@ -238,7 +238,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-01 23:24:59" itemprop="dateModified" datetime="2020-03-01T23:24:59+08:00">2020-03-01</time>
+                <time title="修改时间：2020-03-01 23:29:01" itemprop="dateModified" datetime="2020-03-01T23:29:01+08:00">2020-03-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -281,22 +281,22 @@
 <p>&emsp;&emsp;当然这里有一个疑问，就是为什么将一个文件在版本库更新为什么要分两步呢？第一步<code>add</code>可以多次使用,选择不同的文件，然后使用<code>commit</code>一次提交。可以使用<code>add .</code>来选定所有文件。</p>
 <p>&emsp;&emsp;至于具体的版本控制，emmmmmm这个我也不会，因为还没有用到过……所以还是先说一下<code>github</code>的使用。</p>
 <h2 id="远程仓库，GitHub"><a href="#远程仓库，GitHub" class="headerlink" title="远程仓库，GitHub"></a>远程仓库，GitHub</h2><h3 id="创建远程仓库"><a href="#创建远程仓库" class="headerlink" title="创建远程仓库"></a>创建远程仓库</h3><p>&emsp;&emsp;注册一个GitHub账号，在GitHub右上角可以创建一个新的远程仓库。如下图:</p>
-<p><img src="../images/github_new_repo.png" alt="github_new_repo"></p>
+<p><img src="\../images/github_new_repo.png" alt="github_new_repo"></p>
 <p>&emsp;&emsp;点进去页面如下:</p>
-<p><img src="../images/github_create_repo.png" alt="github_create_repo"></p>
+<p><img src="\../images/github_create_repo.png" alt="github_create_repo"></p>
 <p>&emsp;&emsp;用作演示，我们创建了一个名为<code>GitHubTest</code>的仓库，并且没有初始化<code>README</code>文件。如下图:(当然什么都没有)</p>
-<p><img src="../images/GitHubTest_repo.png" alt="GitHubTest_repo"></p>
+<p><img src="\../images/GitHubTest_repo.png" alt="GitHubTest_repo"></p>
 <p>&emsp;&emsp;其中红框的部分是这个仓库的公钥，我们在本地根据这个公钥可以关联这个远程仓库。当然，别人的仓库你也是可以关联的，但是由于对方仓库的权限限制，你无法进行同步操作。</p>
 <p>&emsp;&emsp;我们在cmd中进入到本地仓库的根目录，执行命令<code>git remote add origin [仓库SSH]</code>,SSH即为前面图片框起来的部分。如图:</p>
-<p><img src="../images/git_remote.png" alt="git_remote"></p>
+<p><img src="\../images/git_remote.png" alt="git_remote"></p>
 <p>&emsp;&emsp;似乎是什么都没发生，那就说明我们没做错。简洁的即是美的。</p>
 <p>&emsp;&emsp;这个命令的作用是关联一个远程仓库，其中<code>origin</code>是这仓库的名字，当然你也可以用别的单词来代替。但<code>origin</code>是我们约定俗称的，用来表示远程仓库。</p>
 <p>&emsp;&emsp;下面我们应用<code>git push -u origin master</code>将本地仓库推送到远程仓库上。</p>
-<p><img src="../images/git_push.png" alt="git_push"></p>
+<p><img src="\../images/git_push.png" alt="git_push"></p>
 <p>&emsp;&emsp;把本地库的内容推送到远程，用<code>git push</code>命令，实际上是把当前分支<code>master</code>推送到远程。</p>
 <p>&emsp;&emsp;由于远程库是空的，我们第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，Git不但会把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以简化命令。(这段是抄的)</p>
 <p>&emsp;&emsp;当我们查看我们的远程仓库时，你会惊奇地发现，我们的远程仓库已经有了和本地仓库一样的文件(第一次这么做的时候我惊喜了老半天，觉得好神奇)。如图:</p>
-<p><img src="../images/github_check.png" alt="git_check"></p>
+<p><img src="\../images/github_check.png" alt="git_check"></p>
 <p>&emsp;&emsp;以后我们提交远程仓库，只需要使用<code>git push origin master</code>就可以了。</p>
 
     </div>
