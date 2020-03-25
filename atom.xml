@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-16T16:31:44.903Z</updated>
+  <updated>2020-03-25T14:07:54.225Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Codeforces Global Round 7 Solution</title>
+    <link href="http://yoursite.com/2020/03/25/Codeforces-Global-Round-7-Solution/"/>
+    <id>http://yoursite.com/2020/03/25/Codeforces-Global-Round-7-Solution/</id>
+    <published>2020-03-25T14:07:54.000Z</published>
+    <updated>2020-03-25T14:07:54.225Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>New life</title>
