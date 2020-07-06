@@ -1,9 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>欧拉函数的积性证明</title>
+    <url>/2020/07/07/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p>对于欧拉函数是积性函数的证明</p>
+<a id="more"></a>
+<h1 id="欧拉函数的积性证明"><a href="#欧拉函数的积性证明" class="headerlink" title="欧拉函数的积性证明"></a>欧拉函数的积性证明</h1><h2 id="积性函数"><a href="#积性函数" class="headerlink" title="积性函数"></a>积性函数</h2><p><strong>积性函数</strong> 是指对于函数$ f $，当$ gcd(m, n) = 1 $时，$f(m)f(n) = f(mn)$。</p>
+<p><strong>完全积性函数</strong> 是指对于函数$f$，$f(m)(n) = f(mn)$。</p>
+<p>下面我们将证明<strong>欧拉函数</strong>是<strong>积性函数</strong>。</p>
+<h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><p><strong>目标等式：</strong> $\phi(m)\phi(n) = \phi(mn)$</p>
+<h3 id="符号约定"><a href="#符号约定" class="headerlink" title="符号约定"></a>符号约定</h3><p>$\phi(n)$：欧拉函数</p>
+<p>$X$ ： $m$ 的<strong>简化剩余系</strong></p>
+<p>$Y$ ： $n$ 的<strong>简化剩余系</strong></p>
+<p>$Z$ ： $mn$ 的<strong>简化剩余系</strong></p>
+<p>$x_i$ ：$X$ 的代表元素</p>
+<p>$y_i$ ： $Y$ 的代表元素</p>
+<p>$z$ ： $Z$ 的代表元素</p>
+<p>$(x,y)$ ： $x，y$ 的最大公约数</p>
+<h3 id="证明思路"><a href="#证明思路" class="headerlink" title="证明思路"></a>证明思路</h3><p> 我们构造等式 $x_in+y_jm$ ，我们想要证明 $\{x_in+y_jm\}$ 和 $mn$ 的简化剩余系 $Z$ 之间存在一个<strong>双射关系</strong>，也就是说 $x_in+y_jm$ 的个数与 $mn$ 的简化剩余系的个数相同。</p>
+<p>同时，我们将证明 $x_in+y_jm$ 当 $i，j$ 不同时不在同一<strong>剩余类</strong>中。这样得到 $x_in+y_im$ 可以表示 $\phi(m)\phi(n)$ 个不同的剩余类。目标等式得证。所以我们将证明：</p>
+<ol>
+<li>$x_in+y_jm\in Z$ ，即 $gcd(x_in+y_jm,mn)=1$</li>
+<li>$\forall z,\exist i, j, \mbox{ s.t. } x_in+y_jm \equiv z \pmod{mn}$</li>
+<li>对于任意一个有序二元组$(i,j)\neq(k,l)，$ $x_in+y_jm\equiv x_kn+y_lm \pmod{mn} $</li>
+</ol>
+<p>$1,2$ 实际上证明了双射关系，$3$ 则证明了不在同一剩余类。</p>
+<h3 id="证明过程"><a href="#证明过程" class="headerlink" title="证明过程"></a>证明过程</h3><h4 id="对1的证明"><a href="#对1的证明" class="headerlink" title="对1的证明"></a>对1的证明</h4><script type="math/tex; mode=display">(x_i,m)=1\Longrightarrow(x_in,m)=1\Longrightarrow(x_in,mn)=1 \tag{1}</script><script type="math/tex; mode=display">(y_i,n)=1\Longrightarrow(y_im,n)=1\Longrightarrow(y_im,mn)=1 \tag{2}</script><p>由 $(1)，(2)$ 得 <script type="math/tex">(x_im+y_jm,mn)=1</script></p>
+<h4 id="对2的证明"><a href="#对2的证明" class="headerlink" title="对2的证明"></a>对2的证明</h4><p>由 $(m,n)=1$ 可得，存在 $p，q$ 使得 $mp+nq=z$。</p>
+<p>那么，我们可以得到：</p>
+<p>$(z,mn)=1\Rightarrow(mp+nq,mn)=1\Rightarrow(mp+nq,m)=1\Rightarrow(nq,m)=1\Rightarrow(q,m)=1$</p>
+<p>由此可得，$q$ 在 $m$ 的简化剩余系中，所以 $\exist x_i,x_i \equiv q \pmod{m}$，可以推得</p>
+<script type="math/tex; mode=display">x_in \equiv qn \pmod{mn} \tag{3}</script><p>同理，我们可以得到：</p>
+<script type="math/tex; mode=display">y_jm \equiv pm \pmod{mn} \tag{4}</script><p>由 $(3),(4)$ 我们可以得到：</p>
+<script type="math/tex; mode=display">x_in+y_jm \equiv qn+ pm \equiv z  \pmod{mn}</script><h4 id="对3的证明"><a href="#对3的证明" class="headerlink" title="对3的证明"></a>对3的证明</h4><p>应用反证法，我们假设存在这样的有序二元组 $(i,j)$ 和 $(k,l)$ 满足 $(i,j)\neq(k,l)$ 使得 $x_in+y_jm\equiv x_kn+y_lm \pmod{mn} $ ，那么我们有 ：</p>
+<p>$x_in+y_jm\equiv x_kn+y_lm \pmod{m} \Rightarrow x_in \equiv x_kn \pmod{m} \Rightarrow x_i \equiv x_k \pmod{m}$ ，而由题设我们可以知道 $\forall i \neq k, x_i \not\equiv x_k \pmod{m}$，所以<strong>矛盾</strong>。</p>
+<p>所以对于任意一个有序二元组$(i,j)\neq(k,l)，$ $x_in+y_jm\equiv x_kn+y_lm \pmod{mn} $ 得证。</p>
+<h4 id="综上，证得欧拉函数为积性函数。"><a href="#综上，证得欧拉函数为积性函数。" class="headerlink" title="综上，证得欧拉函数为积性函数。"></a>综上，证得欧拉函数为积性函数。</h4>]]></content>
+      <categories>
+        <category>ACM-Math</category>
+      </categories>
+      <tags>
+        <tag>learning</tag>
+        <tag>ACM</tag>
+        <tag>Math</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker学习笔记</title>
     <url>/2020/05/25/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<a id="more"></a>
+    <content><![CDATA[<p>Docker学习笔记，课程链接：<a href="https://www.bilibili.com/video/BV1og4y1q7M4" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1og4y1q7M4</a></p>
+<a id="more"></a>
 <h1 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h1><h2 id="Docker安装-1"><a href="#Docker安装-1" class="headerlink" title="Docker安装"></a>Docker安装</h2><ol>
 <li><p>卸载旧版本</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo yum remove docker \</span><br><span class="line">                  docker-client \</span><br><span class="line">                  docker-client-latest \</span><br><span class="line">                  docker-common \</span><br><span class="line">                  docker-latest \</span><br><span class="line">                  docker-latest-logrotate \</span><br><span class="line">                  docker-logrotate \</span><br><span class="line">                  docker-engine</span><br></pre></td></tr></table></figure>
@@ -72,7 +118,12 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 命令 docker run -d 镜像名</span></span><br><span class="line">[root@iZ2zeb4w6gvcyumtazbl85Z ~]# docker run -d --name="rain" centos</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 问题docker ps：发现centos 停止了</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">常见的坑：docker 容器使用后台运行，就必须要有一个前台进程，docker发现没有应用，会自动停止</span></span><br></pre></td></tr></table></figure>
 <p><strong>查看日志</strong></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker logs -f -t --tail	#容器，没有日志</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 写一段shell脚本</span></span><br><span class="line">while true;do echo raincurtain;sleep 1;done</span><br><span class="line"></span><br><span class="line">[root@iZ2zeb4w6gvcyumtazbl85Z ~]# docker run -d centos /bin/bash -c "while true;do echo raincurtain;sleep 1;done"</span><br><span class="line"></span><br><span class="line">[root@iZ2zeb4w6gvcyumtazbl85Z ~]# docker ps -q</span><br><span class="line">43872217f9f2</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示日志</span></span><br><span class="line">-t 				# 显示日志时间戳</span><br><span class="line">-f				# 跟随最新的日志</span><br><span class="line">--tail number	# 显示指定行数的日志</span><br><span class="line">[root@iZ2zeb4w6gvcyumtazbl85Z ~]# docker logs -t -f --tail 10 43872217f9f2</span><br></pre></td></tr></table></figure>
-<hr>
+<p><strong>查看容器中进程信息</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 命令：docker top 容器id</span></span><br><span class="line">[root@iZ2zeb4w6gvcyumtazbl85Z ~]# docker top 39</span><br><span class="line">UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD</span><br><span class="line">root                27766               27750               0                   10:05               ?                   00:00:00            /bin/bash -c while true;do echo raincurtain;sleep 1;done</span><br><span class="line">root                27820               27766               0                   10:06               ?                   00:00:00            /usr/bin/coreutils --coreutils-prog-shebang=sleep /usr/bin/sleep 1</span><br></pre></td></tr></table></figure>
+<p><strong>查看镜像的元数据</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 命令 docker inspect 容器id</span></span><br></pre></td></tr></table></figure>
+<p><strong>进入当前正在运行的容器</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 通常容器使用后台方式运行</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 命令</span></span><br><span class="line">docker exec -it 容器id bashShell</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 测试</span></span><br><span class="line">(raincur) [root@iZ2zeb4w6gvcyumtazbl85Z ~]# docker exec -it 39 /bin/bash</span><br><span class="line">[root@3901e33565a3 /]# ps -ef</span><br><span class="line">UID        PID  PPID  C STIME TTY          TIME CMD</span><br><span class="line">root         1     0  0 02:05 ?        00:00:00 /bin/bash -c while true;do echo</span><br><span class="line">root       484     0  0 02:13 pts/0    00:00:00 /bin/bash</span><br><span class="line">root       503     1  0 02:14 ?        00:00:00 /usr/bin/coreutils --coreutils-p</span><br><span class="line">root       504   484  0 02:14 pts/0    00:00:00 ps -ef</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 方式二</span></span><br><span class="line">docker attach 容器id</span><br><span class="line">正在执行当前的代码</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> docker <span class="built_in">exec</span> 	<span class="comment"># 进入容器后开启一个新的终端，可以在里面操作</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> docker attach	<span class="comment"># 进入容器</span></span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Docker</category>
