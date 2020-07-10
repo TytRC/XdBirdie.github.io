@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>欧拉定理与费马小定理</title>
+    <url>/2020/07/10/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86%E4%B8%8E%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/</url>
+    <content><![CDATA[<h1 id="费马小定理"><a href="#费马小定理" class="headerlink" title="费马小定理"></a>费马小定理</h1><h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>若 $p$ 为素数，$gcd(a,p)=1$，则 $a^{p-1}\equiv1\pmod{p}$。</p>
+<h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>考虑集合 $A$ 为模 $p$ 意义下的<strong>最小完整剩余系</strong>，即 $A=\{1,2,…,p-1\}$。而集合 $B$ 为 $\{1a,2a,…,(p-1)a\}$。我们将证明集合 $B$ 在模 $p$ 意义下与集合 $A$ 是一一对应关系，即集合 $B$ 也是模 $p$ 意义下的完整剩余系。</p>
+<p>由此，我们可以应用公式：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& 1a\cdot2a\cdot...\cdot(p-1)a &\equiv1\cdot2\cdot...\cdot(p-1)&\pmod{p}\\
+\Rightarrow & a^{p-1}\cdot1\cdot2\cdot...\cdot(p-1) &\equiv1\cdot2\cdot...\cdot(p-1)&\pmod{p}\\
+\Rightarrow & a^{p-1} \equiv 1 \pmod{p}
+\end{align}</script><p>即证明得到费马小定理。</p>
+<h3 id="主要证明过程"><a href="#主要证明过程" class="headerlink" title="主要证明过程"></a>主要证明过程</h3><p>下面我们证明集合 $A,B$ 是一一对应关系。为此，我们可以证明 $\forall i\neq j,ia\not\equiv ja \pmod{p}$。</p>
+<p>应用反证法，假设 $\exist i\neq j,ia\equiv ja \pmod{p}$，同时不妨设 $i &gt; j$，那么我们可以得到 $(i-j)a \mid p$。而由题设我们可以得到 $gcd(a,p)=1$，且 $0&lt;(i-j)&lt;p$，$p$ 是质数，所以 $gcd(i-j,p)=1$。所以 $(i-j)a\nmid p$，矛盾。</p>
+<p>于是我们证明了 $\forall i\neq j,ia\not\equiv ja \pmod{p}$，即证明了集合 $A,B$ 的一一对应关系。由此根据先前的推到，我们证明得到了费马小定理。</p>
+<h1 id="欧拉定理"><a href="#欧拉定理" class="headerlink" title="欧拉定理"></a>欧拉定理</h1><h2 id="内容-1"><a href="#内容-1" class="headerlink" title="内容"></a>内容</h2><p>欧拉定理可以视为费马小定理的推广形式，定理内容如下：</p>
+<script type="math/tex; mode=display">
+若 gcd(a,m)=1，则a^{\phi(m)}\equiv 1\pmod{m}</script><p>当 $m$ 为质数时，$\phi(m)=m-1$，我们即得到了费马小定理。</p>
+<h2 id="证明-1"><a href="#证明-1" class="headerlink" title="证明"></a>证明</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>欧拉定理具体的证明思路与费马小定理相仿，我们利用模 $m$ 意义下的<strong>简化剩余系</strong> $r_1,r_2,…,r_{\phi(m)}$ ，我们对其每一个元素乘 $a$ ，得到 $ar_1,ar_2,…,ar_{\phi(m)}$，我们将证明这样操作得到的集合仍然是模 $m$ 意义下的简化剩余系。按照对费马小定理相同的处理方式，我们可以证明得到欧拉定理。 </p>
+<h3 id="主要证明过程-1"><a href="#主要证明过程-1" class="headerlink" title="主要证明过程"></a>主要证明过程</h3><p>我们将证明以下两点：</p>
+<ol>
+<li>$ar_i$ 与 $m$ 互质<br> $\because gcd(a,m)=1，gcd(r_i,m)=1$<br> $\therefore gcd(ar_i,m)=1$</li>
+<li>$\forall i\neq j，ar_i\not\equiv ar_j \pmod{m}$<br> 应用反证法，与费马小定理证明相仿，故在此略去。</li>
+</ol>
+<p>$\therefore ar_1,ar_2,…,ar_{\phi(m)}$ 也是模 $m$ 意义下的一个简化剩余系。</p>
+<p>$\therefore ar_1\cdot ar_2\cdot…\cdot ar_{\phi(m)} \equiv r_1 \cdot r_2 \cdot…\cdot r_{\phi(m)} \pmod{m}$</p>
+<p>即得到 $a^{\phi(m)}\equiv 1 \pmod{m}$</p>
+<h1 id="拓展欧拉定理"><a href="#拓展欧拉定理" class="headerlink" title="拓展欧拉定理"></a>拓展欧拉定理</h1><h2 id="内容-2"><a href="#内容-2" class="headerlink" title="内容"></a>内容</h2><p>拓展欧拉定理时在比赛刷题中常用的公式，可以很方便的讲一个看似根本不可能计算的幂次方（甚至幂套幂套幂……）逐步通过取模简化至可以计算的形式。与快速幂一次食用效果更佳。</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+a^b \equiv \left\{
+\begin{array}
+aa^{b \mod {\phi(p)}},& gcd(a,p)=1\\
+a^b,& gcd(a,p)\neq 1,b<\phi(p)\pmod{p}\\
+a^{b \mod{\phi(p)} + \phi(p)},&gcd(a,p) \neq 1,b\geq\phi(p)
+\end{array}
+\right.
+\end{equation}</script><h2 id="证明-2"><a href="#证明-2" class="headerlink" title="证明"></a>证明</h2><p>不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会。</p>
+<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><p><a href="https://www.luogu.com.cn/problem/P5091" target="_blank" rel="noopener">洛谷P5091 【模板】扩展欧拉定理</a></p>
+]]></content>
+      <categories>
+        <category>ACM-Math</category>
+      </categories>
+      <tags>
+        <tag>learning</tag>
+        <tag>ACM</tag>
+        <tag>Math</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>欧拉函数的积性证明</title>
     <url>/2020/07/07/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p>对于欧拉函数是积性函数的证明</p>
