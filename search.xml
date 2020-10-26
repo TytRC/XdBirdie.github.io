@@ -296,8 +296,8 @@ a^{b \mod{\phi(p)} + \phi(p)},&gcd(a,p) \neq 1,b\geq\phi(p)
       </categories>
       <tags>
         <tag>learning</tag>
-        <tag>Spring</tag>
         <tag>JAVA</tag>
+        <tag>Spring</tag>
       </tags>
   </entry>
   <entry>
@@ -380,9 +380,9 @@ a^{b \mod{\phi(p)} + \phi(p)},&gcd(a,p) \neq 1,b\geq\phi(p)
         <category>ACM Practice</category>
       </categories>
       <tags>
+        <tag>learning</tag>
         <tag>Codeforces</tag>
         <tag>Solution</tag>
-        <tag>learning</tag>
         <tag>ACM</tag>
       </tags>
   </entry>
