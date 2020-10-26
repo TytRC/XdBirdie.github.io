@@ -3,7 +3,9 @@
   <entry>
     <title>欧拉定理与费马小定理</title>
     <url>/2020/07/10/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86%E4%B8%8E%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/</url>
-    <content><![CDATA[<h1 id="费马小定理"><a href="#费马小定理" class="headerlink" title="费马小定理"></a>费马小定理</h1><h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>若 $p$ 为素数，$gcd(a,p)=1$，则 $a^{p-1}\equiv1\pmod{p}$。</p>
+    <content><![CDATA[<p>欧拉定理与费马小定理的证明。本文参考自 $OIWiki$，并对证明结构进行了改进。原文链接：<a href="https://oi-wiki.org/math/fermat/" target="_blank" rel="noopener">欧拉定理 &amp; 费马小定理</a></p>
+<a id="more"></a>
+<h1 id="费马小定理"><a href="#费马小定理" class="headerlink" title="费马小定理"></a>费马小定理</h1><h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>若 $p$ 为素数，$gcd(a,p)=1$，则 $a^{p-1}\equiv1\pmod{p}$。</p>
 <h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>考虑集合 $A$ 为模 $p$ 意义下的<strong>最小完整剩余系</strong>，即 $A=\{1,2,…,p-1\}$。而集合 $B$ 为 $\{1a,2a,…,(p-1)a\}$。我们将证明集合 $B$ 在模 $p$ 意义下与集合 $A$ 是一一对应关系，即集合 $B$ 也是模 $p$ 意义下的完整剩余系。</p>
 <p>由此，我们可以应用公式：</p>
 <script type="math/tex; mode=display">
@@ -33,10 +35,10 @@
 a^b \equiv \left\{
 \begin{array}
 aa^{b \mod {\phi(p)}},& gcd(a,p)=1\\
-a^b,& gcd(a,p)\neq 1,b<\phi(p)\pmod{p}\\
+a^b,& gcd(a,p)\neq 1,b<\phi(p)\\
 a^{b \mod{\phi(p)} + \phi(p)},&gcd(a,p) \neq 1,b\geq\phi(p)
 \end{array}
-\right.
+\right. \pmod{p}
 \end{equation}</script><h2 id="证明-2"><a href="#证明-2" class="headerlink" title="证明"></a>证明</h2><p>不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会不会。</p>
 <h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><p><a href="https://www.luogu.com.cn/problem/P5091" target="_blank" rel="noopener">洛谷P5091 【模板】扩展欧拉定理</a></p>
 ]]></content>
