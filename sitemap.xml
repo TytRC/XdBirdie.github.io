@@ -2,91 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2020/07/10/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86%E4%B8%8E%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/</loc>
+    <loc>http://blog.raincur.com/tags/links.json</loc>
     
     <lastmod>2020-10-26</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/links/index.html</loc>
+    <loc>http://blog.raincur.com/2020/07/10/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86%E4%B8%8E%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/</loc>
     
     <lastmod>2020-10-26</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/07/07/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</loc>
+    <loc>http://blog.raincur.com/links/index.html</loc>
+    
+    <lastmod>2020-10-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.raincur.com/2020/07/07/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</loc>
     
     <lastmod>2020-07-06</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/05/25/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://blog.raincur.com/2020/05/25/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2020-05-27</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/05/21/Spring%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-01/</loc>
+    <loc>http://blog.raincur.com/2020/05/21/Spring%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-01/</loc>
     
     <lastmod>2020-05-22</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/03/25/Codeforces-Global-Round-7-Solution/</loc>
+    <loc>http://blog.raincur.com/2020/03/25/Codeforces-Global-Round-7-Solution/</loc>
     
     <lastmod>2020-05-21</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/02/28/Github_first_try/</loc>
+    <loc>http://blog.raincur.com/2020/02/28/Github_first_try/</loc>
     
     <lastmod>2020-05-21</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/05/17/%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF%E8%8A%B1%E5%89%8C%E5%AD%90%E6%A8%A1%E5%9B%BD%E7%8E%8B/</loc>
+    <loc>http://blog.raincur.com/2020/05/17/%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF%E8%8A%B1%E5%89%8C%E5%AD%90%E6%A8%A1%E5%9B%BD%E7%8E%8B/</loc>
     
     <lastmod>2020-05-21</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/03/17/New-life/</loc>
+    <loc>http://blog.raincur.com/2020/03/17/New-life/</loc>
     
     <lastmod>2020-03-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/02/25/RainCurtain/</loc>
+    <loc>http://blog.raincur.com/2020/02/25/RainCurtain/</loc>
     
     <lastmod>2020-03-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/03/11/%E8%B0%88%E5%B9%B8%E7%A6%8F/</loc>
+    <loc>http://blog.raincur.com/2020/03/11/%E8%B0%88%E5%B9%B8%E7%A6%8F/</loc>
     
     <lastmod>2020-03-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/index.html</loc>
+    <loc>http://blog.raincur.com/categories/index.html</loc>
     
     <lastmod>2020-02-25</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
+    <loc>http://blog.raincur.com/tags/index.html</loc>
     
     <lastmod>2020-02-25</lastmod>
     
@@ -94,7 +101,7 @@
   
 
   <url>
-    <loc>http://yoursite.com/</loc>
+    <loc>http://blog.raincur.com/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -102,91 +109,91 @@
 
   
   <url>
-    <loc>http://yoursite.com/tags/Codeforces/</loc>
+    <loc>http://blog.raincur.com/tags/Docker/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/Solution/</loc>
+    <loc>http://blog.raincur.com/tags/learning/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/ACM/</loc>
+    <loc>http://blog.raincur.com/tags/Codeforces/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/learning/</loc>
+    <loc>http://blog.raincur.com/tags/Solution/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/Docker/</loc>
+    <loc>http://blog.raincur.com/tags/ACM/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/github/</loc>
+    <loc>http://blog.raincur.com/tags/%E4%B8%AA%E4%BA%BA/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA/</loc>
+    <loc>http://blog.raincur.com/tags/%E6%83%85%E7%BB%AA/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/%E6%83%85%E7%BB%AA/</loc>
+    <loc>http://blog.raincur.com/tags/%E6%84%9F%E6%82%9F/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/JAVA/</loc>
+    <loc>http://blog.raincur.com/tags/github/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/Spring/</loc>
+    <loc>http://blog.raincur.com/tags/JAVA/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/%E6%84%9F%E6%82%9F/</loc>
+    <loc>http://blog.raincur.com/tags/Spring/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/Math/</loc>
+    <loc>http://blog.raincur.com/tags/%E7%9C%8B%E6%B3%95/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/%E7%9C%8B%E6%B3%95/</loc>
+    <loc>http://blog.raincur.com/tags/Math/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -195,42 +202,42 @@
 
   
   <url>
-    <loc>http://yoursite.com/categories/ACM-Practice/</loc>
+    <loc>http://blog.raincur.com/categories/Docker/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/Docker/</loc>
+    <loc>http://blog.raincur.com/categories/ACM-Practice/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/github/</loc>
+    <loc>http://blog.raincur.com/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%B0%88/</loc>
+    <loc>http://blog.raincur.com/categories/github/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/Spring/</loc>
+    <loc>http://blog.raincur.com/categories/Spring/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/ACM-Math/</loc>
+    <loc>http://blog.raincur.com/categories/ACM-Math/</loc>
     <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

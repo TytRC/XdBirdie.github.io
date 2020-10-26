@@ -5,9 +5,9 @@
   <subtitle>Like a BIRDIE flies into your heart...</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://blog.raincur.com/"/>
   <updated>2020-10-26T11:33:47.823Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://blog.raincur.com/</id>
   
   <author>
     <name>Rain Chen</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>欧拉定理与费马小定理</title>
-    <link href="http://yoursite.com/2020/07/10/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86%E4%B8%8E%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/"/>
-    <id>http://yoursite.com/2020/07/10/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86%E4%B8%8E%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/</id>
+    <link href="http://blog.raincur.com/2020/07/10/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86%E4%B8%8E%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/"/>
+    <id>http://blog.raincur.com/2020/07/10/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86%E4%B8%8E%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/</id>
     <published>2020-07-10T10:53:22.000Z</published>
     <updated>2020-10-26T11:33:47.823Z</updated>
     
@@ -32,21 +32,21 @@
     </summary>
     
     
-      <category term="ACM-Math" scheme="http://yoursite.com/categories/ACM-Math/"/>
+      <category term="ACM-Math" scheme="http://blog.raincur.com/categories/ACM-Math/"/>
     
     
-      <category term="ACM" scheme="http://yoursite.com/tags/ACM/"/>
+      <category term="learning" scheme="http://blog.raincur.com/tags/learning/"/>
     
-      <category term="learning" scheme="http://yoursite.com/tags/learning/"/>
+      <category term="ACM" scheme="http://blog.raincur.com/tags/ACM/"/>
     
-      <category term="Math" scheme="http://yoursite.com/tags/Math/"/>
+      <category term="Math" scheme="http://blog.raincur.com/tags/Math/"/>
     
   </entry>
   
   <entry>
     <title>欧拉函数的积性证明</title>
-    <link href="http://yoursite.com/2020/07/07/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/"/>
-    <id>http://yoursite.com/2020/07/07/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</id>
+    <link href="http://blog.raincur.com/2020/07/07/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/"/>
+    <id>http://blog.raincur.com/2020/07/07/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</id>
     <published>2020-07-06T16:41:32.000Z</published>
     <updated>2020-07-06T16:49:21.474Z</updated>
     
@@ -59,21 +59,21 @@
     </summary>
     
     
-      <category term="ACM-Math" scheme="http://yoursite.com/categories/ACM-Math/"/>
+      <category term="ACM-Math" scheme="http://blog.raincur.com/categories/ACM-Math/"/>
     
     
-      <category term="ACM" scheme="http://yoursite.com/tags/ACM/"/>
+      <category term="learning" scheme="http://blog.raincur.com/tags/learning/"/>
     
-      <category term="learning" scheme="http://yoursite.com/tags/learning/"/>
+      <category term="ACM" scheme="http://blog.raincur.com/tags/ACM/"/>
     
-      <category term="Math" scheme="http://yoursite.com/tags/Math/"/>
+      <category term="Math" scheme="http://blog.raincur.com/tags/Math/"/>
     
   </entry>
   
   <entry>
     <title>Docker学习笔记</title>
-    <link href="http://yoursite.com/2020/05/25/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2020/05/25/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <link href="http://blog.raincur.com/2020/05/25/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://blog.raincur.com/2020/05/25/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2020-05-25T15:42:54.000Z</published>
     <updated>2020-05-27T02:25:34.120Z</updated>
     
@@ -86,19 +86,19 @@
     </summary>
     
     
-      <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
+      <category term="Docker" scheme="http://blog.raincur.com/categories/Docker/"/>
     
     
-      <category term="learning" scheme="http://yoursite.com/tags/learning/"/>
+      <category term="Docker" scheme="http://blog.raincur.com/tags/Docker/"/>
     
-      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+      <category term="learning" scheme="http://blog.raincur.com/tags/learning/"/>
     
   </entry>
   
   <entry>
     <title>Spring学习日记-01</title>
-    <link href="http://yoursite.com/2020/05/21/Spring%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-01/"/>
-    <id>http://yoursite.com/2020/05/21/Spring%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-01/</id>
+    <link href="http://blog.raincur.com/2020/05/21/Spring%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-01/"/>
+    <id>http://blog.raincur.com/2020/05/21/Spring%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-01/</id>
     <published>2020-05-21T15:32:54.000Z</published>
     <updated>2020-05-22T07:06:59.771Z</updated>
     
@@ -111,21 +111,21 @@
     </summary>
     
     
-      <category term="Spring" scheme="http://yoursite.com/categories/Spring/"/>
+      <category term="Spring" scheme="http://blog.raincur.com/categories/Spring/"/>
     
     
-      <category term="learning" scheme="http://yoursite.com/tags/learning/"/>
+      <category term="learning" scheme="http://blog.raincur.com/tags/learning/"/>
     
-      <category term="JAVA" scheme="http://yoursite.com/tags/JAVA/"/>
+      <category term="JAVA" scheme="http://blog.raincur.com/tags/JAVA/"/>
     
-      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+      <category term="Spring" scheme="http://blog.raincur.com/tags/Spring/"/>
     
   </entry>
   
   <entry>
     <title>我们都是花剌子模国王</title>
-    <link href="http://yoursite.com/2020/05/17/%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF%E8%8A%B1%E5%89%8C%E5%AD%90%E6%A8%A1%E5%9B%BD%E7%8E%8B/"/>
-    <id>http://yoursite.com/2020/05/17/%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF%E8%8A%B1%E5%89%8C%E5%AD%90%E6%A8%A1%E5%9B%BD%E7%8E%8B/</id>
+    <link href="http://blog.raincur.com/2020/05/17/%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF%E8%8A%B1%E5%89%8C%E5%AD%90%E6%A8%A1%E5%9B%BD%E7%8E%8B/"/>
+    <id>http://blog.raincur.com/2020/05/17/%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF%E8%8A%B1%E5%89%8C%E5%AD%90%E6%A8%A1%E5%9B%BD%E7%8E%8B/</id>
     <published>2020-05-17T09:50:42.000Z</published>
     <updated>2020-05-21T15:44:42.517Z</updated>
     
@@ -138,19 +138,19 @@
     </summary>
     
     
-      <category term="随笔杂谈" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%B0%88/"/>
+      <category term="随笔杂谈" scheme="http://blog.raincur.com/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%B0%88/"/>
     
     
-      <category term="个人" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="个人" scheme="http://blog.raincur.com/tags/%E4%B8%AA%E4%BA%BA/"/>
     
-      <category term="看法" scheme="http://yoursite.com/tags/%E7%9C%8B%E6%B3%95/"/>
+      <category term="看法" scheme="http://blog.raincur.com/tags/%E7%9C%8B%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>Codeforces Global Round 7 Solution</title>
-    <link href="http://yoursite.com/2020/03/25/Codeforces-Global-Round-7-Solution/"/>
-    <id>http://yoursite.com/2020/03/25/Codeforces-Global-Round-7-Solution/</id>
+    <link href="http://blog.raincur.com/2020/03/25/Codeforces-Global-Round-7-Solution/"/>
+    <id>http://blog.raincur.com/2020/03/25/Codeforces-Global-Round-7-Solution/</id>
     <published>2020-03-25T14:07:54.000Z</published>
     <updated>2020-05-21T15:52:50.972Z</updated>
     
@@ -163,23 +163,23 @@
     </summary>
     
     
-      <category term="ACM Practice" scheme="http://yoursite.com/categories/ACM-Practice/"/>
+      <category term="ACM Practice" scheme="http://blog.raincur.com/categories/ACM-Practice/"/>
     
     
-      <category term="Codeforces" scheme="http://yoursite.com/tags/Codeforces/"/>
+      <category term="learning" scheme="http://blog.raincur.com/tags/learning/"/>
     
-      <category term="Solution" scheme="http://yoursite.com/tags/Solution/"/>
+      <category term="Codeforces" scheme="http://blog.raincur.com/tags/Codeforces/"/>
     
-      <category term="ACM" scheme="http://yoursite.com/tags/ACM/"/>
+      <category term="Solution" scheme="http://blog.raincur.com/tags/Solution/"/>
     
-      <category term="learning" scheme="http://yoursite.com/tags/learning/"/>
+      <category term="ACM" scheme="http://blog.raincur.com/tags/ACM/"/>
     
   </entry>
   
   <entry>
     <title>New life</title>
-    <link href="http://yoursite.com/2020/03/17/New-life/"/>
-    <id>http://yoursite.com/2020/03/17/New-life/</id>
+    <link href="http://blog.raincur.com/2020/03/17/New-life/"/>
+    <id>http://blog.raincur.com/2020/03/17/New-life/</id>
     <published>2020-03-16T16:02:54.000Z</published>
     <updated>2020-03-16T16:31:44.903Z</updated>
     
@@ -192,19 +192,19 @@
     </summary>
     
     
-      <category term="随笔杂谈" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%B0%88/"/>
+      <category term="随笔杂谈" scheme="http://blog.raincur.com/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%B0%88/"/>
     
     
-      <category term="个人" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="个人" scheme="http://blog.raincur.com/tags/%E4%B8%AA%E4%BA%BA/"/>
     
-      <category term="感悟" scheme="http://yoursite.com/tags/%E6%84%9F%E6%82%9F/"/>
+      <category term="感悟" scheme="http://blog.raincur.com/tags/%E6%84%9F%E6%82%9F/"/>
     
   </entry>
   
   <entry>
     <title>谈幸福</title>
-    <link href="http://yoursite.com/2020/03/11/%E8%B0%88%E5%B9%B8%E7%A6%8F/"/>
-    <id>http://yoursite.com/2020/03/11/%E8%B0%88%E5%B9%B8%E7%A6%8F/</id>
+    <link href="http://blog.raincur.com/2020/03/11/%E8%B0%88%E5%B9%B8%E7%A6%8F/"/>
+    <id>http://blog.raincur.com/2020/03/11/%E8%B0%88%E5%B9%B8%E7%A6%8F/</id>
     <published>2020-03-11T15:19:26.000Z</published>
     <updated>2020-03-11T15:35:59.848Z</updated>
     
@@ -217,19 +217,19 @@
     </summary>
     
     
-      <category term="随笔杂谈" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%B0%88/"/>
+      <category term="随笔杂谈" scheme="http://blog.raincur.com/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%B0%88/"/>
     
     
-      <category term="个人" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="个人" scheme="http://blog.raincur.com/tags/%E4%B8%AA%E4%BA%BA/"/>
     
-      <category term="看法" scheme="http://yoursite.com/tags/%E7%9C%8B%E6%B3%95/"/>
+      <category term="看法" scheme="http://blog.raincur.com/tags/%E7%9C%8B%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>Git&amp;GitHub初体验</title>
-    <link href="http://yoursite.com/2020/02/28/Github_first_try/"/>
-    <id>http://yoursite.com/2020/02/28/Github_first_try/</id>
+    <link href="http://blog.raincur.com/2020/02/28/Github_first_try/"/>
+    <id>http://blog.raincur.com/2020/02/28/Github_first_try/</id>
     <published>2020-02-28T07:18:31.000Z</published>
     <updated>2020-05-21T15:52:44.503Z</updated>
     
@@ -242,19 +242,19 @@
     </summary>
     
     
-      <category term="github" scheme="http://yoursite.com/categories/github/"/>
+      <category term="github" scheme="http://blog.raincur.com/categories/github/"/>
     
     
-      <category term="learning" scheme="http://yoursite.com/tags/learning/"/>
+      <category term="learning" scheme="http://blog.raincur.com/tags/learning/"/>
     
-      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+      <category term="github" scheme="http://blog.raincur.com/tags/github/"/>
     
   </entry>
   
   <entry>
     <title>RainCurtain</title>
-    <link href="http://yoursite.com/2020/02/25/RainCurtain/"/>
-    <id>http://yoursite.com/2020/02/25/RainCurtain/</id>
+    <link href="http://blog.raincur.com/2020/02/25/RainCurtain/"/>
+    <id>http://blog.raincur.com/2020/02/25/RainCurtain/</id>
     <published>2020-02-25T15:17:08.000Z</published>
     <updated>2020-03-11T15:50:28.116Z</updated>
     
@@ -267,12 +267,12 @@
     </summary>
     
     
-      <category term="随笔杂谈" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%B0%88/"/>
+      <category term="随笔杂谈" scheme="http://blog.raincur.com/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%B0%88/"/>
     
     
-      <category term="个人" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="个人" scheme="http://blog.raincur.com/tags/%E4%B8%AA%E4%BA%BA/"/>
     
-      <category term="情绪" scheme="http://yoursite.com/tags/%E6%83%85%E7%BB%AA/"/>
+      <category term="情绪" scheme="http://blog.raincur.com/tags/%E6%83%85%E7%BB%AA/"/>
     
   </entry>
   
