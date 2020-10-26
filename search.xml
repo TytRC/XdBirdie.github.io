@@ -180,8 +180,8 @@ a^{b \mod{\phi(p)} + \phi(p)},&gcd(a,p) \neq 1,b\geq\phi(p)
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>learning</tag>
         <tag>Docker</tag>
+        <tag>learning</tag>
       </tags>
   </entry>
   <entry>
@@ -469,8 +469,8 @@ a^{b \mod{\phi(p)} + \phi(p)},&gcd(a,p) \neq 1,b\geq\phi(p)
         <category>github</category>
       </categories>
       <tags>
-        <tag>github</tag>
         <tag>learning</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>

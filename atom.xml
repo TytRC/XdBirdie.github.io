@@ -89,9 +89,9 @@
       <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
     
     
-      <category term="learning" scheme="http://yoursite.com/tags/learning/"/>
-    
       <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+    
+      <category term="learning" scheme="http://yoursite.com/tags/learning/"/>
     
   </entry>
   
@@ -245,9 +245,9 @@
       <category term="github" scheme="http://yoursite.com/categories/github/"/>
     
     
-      <category term="github" scheme="http://yoursite.com/tags/github/"/>
-    
       <category term="learning" scheme="http://yoursite.com/tags/learning/"/>
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
     
   </entry>
   
