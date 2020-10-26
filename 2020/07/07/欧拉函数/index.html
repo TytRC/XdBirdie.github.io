@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>欧拉函数的积性证明 | RainCurtainの博客</title>
+  <meta name="description" content="对于欧拉函数是积性函数的证明">
+<meta property="og:type" content="article">
+<meta property="og:title" content="欧拉函数的积性证明">
+<meta property="og:url" content="http://yoursite.com/2020/07/07/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:site_name" content="BIRDIE">
+<meta property="og:description" content="对于欧拉函数是积性函数的证明">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-06T16:41:32.000Z">
+<meta property="article:modified_time" content="2020-07-06T16:49:21.474Z">
+<meta property="article:author" content="Rain Chen">
+<meta property="article:tag" content="learning">
+<meta property="article:tag" content="ACM">
+<meta property="article:tag" content="Math">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://yoursite.com/2020/07/07/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="BIRDIE" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    <link href="//cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" rel="stylesheet">
+  
+  
+  
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/XdBirdie" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.png" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">RainCurtain</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">XDUer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Shaanxi, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/XdBirdie" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://rs.xidian.edu.cn/portal.php" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ACM-Practice/">ACM Practice</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ACM-Math/">ACM-Math</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Docker/">Docker</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Spring/">Spring</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%B0%88/">随笔杂谈</a><span class="category-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ACM/" rel="tag">ACM</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Codeforces/" rel="tag">Codeforces</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JAVA/" rel="tag">JAVA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Solution/" rel="tag">Solution</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/" rel="tag">Spring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learning/" rel="tag">learning</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AA%E4%BA%BA/" rel="tag">个人</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%83%85%E7%BB%AA/" rel="tag">情绪</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%84%9F%E6%82%9F/" rel="tag">感悟</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9C%8B%E6%B3%95/" rel="tag">看法</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/ACM/" style="font-size: 13.5px;">ACM</a> <a href="/tags/Codeforces/" style="font-size: 13px;">Codeforces</a> <a href="/tags/Docker/" style="font-size: 13px;">Docker</a> <a href="/tags/JAVA/" style="font-size: 13px;">JAVA</a> <a href="/tags/Math/" style="font-size: 13.25px;">Math</a> <a href="/tags/Solution/" style="font-size: 13px;">Solution</a> <a href="/tags/Spring/" style="font-size: 13px;">Spring</a> <a href="/tags/github/" style="font-size: 13px;">github</a> <a href="/tags/learning/" style="font-size: 14px;">learning</a> <a href="/tags/%E4%B8%AA%E4%BA%BA/" style="font-size: 13.75px;">个人</a> <a href="/tags/%E6%83%85%E7%BB%AA/" style="font-size: 13px;">情绪</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 13px;">感悟</a> <a href="/tags/%E7%9C%8B%E6%B3%95/" style="font-size: 13.25px;">看法</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/ACM-Math/">ACM-Math</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/07/10/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86%E4%B8%8E%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/" class="title">欧拉定理与费马小定理</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-07-10T10:53:22.000Z" itemprop="datePublished">2020-07-10</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/ACM-Math/">ACM-Math</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/07/07/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/" class="title">欧拉函数的积性证明</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-07-06T16:41:32.000Z" itemprop="datePublished">2020-07-07</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Docker/">Docker</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/05/25/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="title">Docker学习笔记</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-05-25T15:42:54.000Z" itemprop="datePublished">2020-05-25</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Spring/">Spring</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/05/21/Spring%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-01/" class="title">Spring学习日记-01</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-05-21T15:32:54.000Z" itemprop="datePublished">2020-05-21</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%B0%88/">随笔杂谈</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/05/17/%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF%E8%8A%B1%E5%89%8C%E5%AD%90%E6%A8%A1%E5%9B%BD%E7%8E%8B/" class="title">我们都是花剌子模国王</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-05-17T09:50:42.000Z" itemprop="datePublished">2020-05-17</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-欧拉函数" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      欧拉函数的积性证明
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/07/07/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/" class="article-date">
+	  <time datetime="2020-07-06T16:41:32.000Z" itemprop="datePublished">2020-07-07</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/ACM-Math/">ACM-Math</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/ACM/" rel="tag">ACM</a>, <a class="article-tag-link" href="/tags/Math/" rel="tag">Math</a>, <a class="article-tag-link" href="/tags/learning/" rel="tag">learning</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/07/07/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>对于欧拉函数是积性函数的证明</p>
+<a id="more"></a>
+<h1 id="欧拉函数的积性证明"><a href="#欧拉函数的积性证明" class="headerlink" title="欧拉函数的积性证明"></a>欧拉函数的积性证明</h1><h2 id="积性函数"><a href="#积性函数" class="headerlink" title="积性函数"></a>积性函数</h2><p><strong>积性函数</strong> 是指对于函数$ f $，当$ gcd(m, n) = 1 $时，$f(m)f(n) = f(mn)$。</p>
+<p><strong>完全积性函数</strong> 是指对于函数$f$，$f(m)(n) = f(mn)$。</p>
+<p>下面我们将证明<strong>欧拉函数</strong>是<strong>积性函数</strong>。</p>
+<h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><p><strong>目标等式：</strong> $\phi(m)\phi(n) = \phi(mn)$</p>
+<h3 id="符号约定"><a href="#符号约定" class="headerlink" title="符号约定"></a>符号约定</h3><p>$\phi(n)$：欧拉函数</p>
+<p>$X$ ： $m$ 的<strong>简化剩余系</strong></p>
+<p>$Y$ ： $n$ 的<strong>简化剩余系</strong></p>
+<p>$Z$ ： $mn$ 的<strong>简化剩余系</strong></p>
+<p>$x_i$ ：$X$ 的代表元素</p>
+<p>$y_i$ ： $Y$ 的代表元素</p>
+<p>$z$ ： $Z$ 的代表元素</p>
+<p>$(x,y)$ ： $x，y$ 的最大公约数</p>
+<h3 id="证明思路"><a href="#证明思路" class="headerlink" title="证明思路"></a>证明思路</h3><p> 我们构造等式 $x_in+y_jm$ ，我们想要证明 $\{x_in+y_jm\}$ 和 $mn$ 的简化剩余系 $Z$ 之间存在一个<strong>双射关系</strong>，也就是说 $x_in+y_jm$ 的个数与 $mn$ 的简化剩余系的个数相同。</p>
+<p>同时，我们将证明 $x_in+y_jm$ 当 $i，j$ 不同时不在同一<strong>剩余类</strong>中。这样得到 $x_in+y_im$ 可以表示 $\phi(m)\phi(n)$ 个不同的剩余类。目标等式得证。所以我们将证明：</p>
+<ol>
+<li>$x_in+y_jm\in Z$ ，即 $gcd(x_in+y_jm,mn)=1$</li>
+<li>$\forall z,\exist i, j, \mbox{ s.t. } x_in+y_jm \equiv z \pmod{mn}$</li>
+<li>对于任意一个有序二元组$(i,j)\neq(k,l)，$ $x_in+y_jm\equiv x_kn+y_lm \pmod{mn} $</li>
+</ol>
+<p>$1,2$ 实际上证明了双射关系，$3$ 则证明了不在同一剩余类。</p>
+<h3 id="证明过程"><a href="#证明过程" class="headerlink" title="证明过程"></a>证明过程</h3><h4 id="对1的证明"><a href="#对1的证明" class="headerlink" title="对1的证明"></a>对1的证明</h4><script type="math/tex; mode=display">(x_i,m)=1\Longrightarrow(x_in,m)=1\Longrightarrow(x_in,mn)=1 \tag{1}</script><script type="math/tex; mode=display">(y_i,n)=1\Longrightarrow(y_im,n)=1\Longrightarrow(y_im,mn)=1 \tag{2}</script><p>由 $(1)，(2)$ 得 <script type="math/tex">(x_im+y_jm,mn)=1</script></p>
+<h4 id="对2的证明"><a href="#对2的证明" class="headerlink" title="对2的证明"></a>对2的证明</h4><p>由 $(m,n)=1$ 可得，存在 $p，q$ 使得 $mp+nq=z$。</p>
+<p>那么，我们可以得到：</p>
+<p>$(z,mn)=1\Rightarrow(mp+nq,mn)=1\Rightarrow(mp+nq,m)=1\Rightarrow(nq,m)=1\Rightarrow(q,m)=1$</p>
+<p>由此可得，$q$ 在 $m$ 的简化剩余系中，所以 $\exist x_i,x_i \equiv q \pmod{m}$，可以推得</p>
+<script type="math/tex; mode=display">x_in \equiv qn \pmod{mn} \tag{3}</script><p>同理，我们可以得到：</p>
+<script type="math/tex; mode=display">y_jm \equiv pm \pmod{mn} \tag{4}</script><p>由 $(3),(4)$ 我们可以得到：</p>
+<script type="math/tex; mode=display">x_in+y_jm \equiv qn+ pm \equiv z  \pmod{mn}</script><h4 id="对3的证明"><a href="#对3的证明" class="headerlink" title="对3的证明"></a>对3的证明</h4><p>应用反证法，我们假设存在这样的有序二元组 $(i,j)$ 和 $(k,l)$ 满足 $(i,j)\neq(k,l)$ 使得 $x_in+y_jm\equiv x_kn+y_lm \pmod{mn} $ ，那么我们有 ：</p>
+<p>$x_in+y_jm\equiv x_kn+y_lm \pmod{m} \Rightarrow x_in \equiv x_kn \pmod{m} \Rightarrow x_i \equiv x_k \pmod{m}$ ，而由题设我们可以知道 $\forall i \neq k, x_i \not\equiv x_k \pmod{m}$，所以<strong>矛盾</strong>。</p>
+<p>所以对于任意一个有序二元组$(i,j)\neq(k,l)，$ $x_in+y_jm\equiv x_kn+y_lm \pmod{mn} $ 得证。</p>
+<h4 id="综上，证得欧拉函数为积性函数。"><a href="#综上，证得欧拉函数为积性函数。" class="headerlink" title="综上，证得欧拉函数为积性函数。"></a>综上，证得欧拉函数为积性函数。</h4>
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://yoursite.com/2020/07/07/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/" title="欧拉函数的积性证明" target="_blank" rel="external">http://yoursite.com/2020/07/07/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/XdBirdie" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/XdBirdie" target="_blank"><span class="text-dark">RainCurtain</span><small class="ml-1x">XDUer</small></a></h3>
+        <div>西电19级学生</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2020/07/10/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86%E4%B8%8E%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/" title="欧拉定理与费马小定理"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2020/05/25/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Docker学习笔记"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/XdBirdie" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://rs.xidian.edu.cn/portal.php" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
