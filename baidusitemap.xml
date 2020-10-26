@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://blog.raincur.com/2019/11/28/Reflection-on-my-learning-since-high-school/</loc>
+    <loc>http://blog.raincur.com/2020/07/28/Reflection-on-my-learning-since-high-school/</loc>
     <lastmod>2020-10-26</lastmod>
   </url>
   <url>
@@ -11,14 +11,6 @@
   <url>
     <loc>http://blog.raincur.com/2020/07/07/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2020-07-06</lastmod>
-  </url>
-  <url>
-    <loc>http://blog.raincur.com/2020/05/25/Docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2020-05-27</lastmod>
-  </url>
-  <url>
-    <loc>http://blog.raincur.com/2020/05/21/Spring%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-01/</loc>
-    <lastmod>2020-05-22</lastmod>
   </url>
   <url>
     <loc>http://blog.raincur.com/2020/03/25/Codeforces-Global-Round-7-Solution/</loc>
