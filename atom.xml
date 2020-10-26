@@ -35,9 +35,9 @@
       <category term="ACM-Math" scheme="http://yoursite.com/categories/ACM-Math/"/>
     
     
-      <category term="learning" scheme="http://yoursite.com/tags/learning/"/>
-    
       <category term="ACM" scheme="http://yoursite.com/tags/ACM/"/>
+    
+      <category term="learning" scheme="http://yoursite.com/tags/learning/"/>
     
       <category term="Math" scheme="http://yoursite.com/tags/Math/"/>
     
@@ -62,9 +62,9 @@
       <category term="ACM-Math" scheme="http://yoursite.com/categories/ACM-Math/"/>
     
     
-      <category term="learning" scheme="http://yoursite.com/tags/learning/"/>
-    
       <category term="ACM" scheme="http://yoursite.com/tags/ACM/"/>
+    
+      <category term="learning" scheme="http://yoursite.com/tags/learning/"/>
     
       <category term="Math" scheme="http://yoursite.com/tags/Math/"/>
     
@@ -89,9 +89,9 @@
       <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
     
     
-      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
-    
       <category term="learning" scheme="http://yoursite.com/tags/learning/"/>
+    
+      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
     
   </entry>
   
@@ -166,13 +166,13 @@
       <category term="ACM Practice" scheme="http://yoursite.com/categories/ACM-Practice/"/>
     
     
-      <category term="learning" scheme="http://yoursite.com/tags/learning/"/>
-    
       <category term="Codeforces" scheme="http://yoursite.com/tags/Codeforces/"/>
     
       <category term="Solution" scheme="http://yoursite.com/tags/Solution/"/>
     
       <category term="ACM" scheme="http://yoursite.com/tags/ACM/"/>
+    
+      <category term="learning" scheme="http://yoursite.com/tags/learning/"/>
     
   </entry>
   
