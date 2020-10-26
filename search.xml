@@ -46,8 +46,8 @@ a^{b \mod{\phi(p)} + \phi(p)},&gcd(a,p) \neq 1,b\geq\phi(p)
         <category>ACM-Math</category>
       </categories>
       <tags>
-        <tag>learning</tag>
         <tag>ACM</tag>
+        <tag>learning</tag>
         <tag>Math</tag>
       </tags>
   </entry>
@@ -91,8 +91,8 @@ a^{b \mod{\phi(p)} + \phi(p)},&gcd(a,p) \neq 1,b\geq\phi(p)
         <category>ACM-Math</category>
       </categories>
       <tags>
-        <tag>learning</tag>
         <tag>ACM</tag>
+        <tag>learning</tag>
         <tag>Math</tag>
       </tags>
   </entry>
@@ -180,8 +180,8 @@ a^{b \mod{\phi(p)} + \phi(p)},&gcd(a,p) \neq 1,b\geq\phi(p)
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Docker</tag>
         <tag>learning</tag>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -380,10 +380,10 @@ a^{b \mod{\phi(p)} + \phi(p)},&gcd(a,p) \neq 1,b\geq\phi(p)
         <category>ACM Practice</category>
       </categories>
       <tags>
-        <tag>learning</tag>
         <tag>Codeforces</tag>
         <tag>Solution</tag>
         <tag>ACM</tag>
+        <tag>learning</tag>
       </tags>
   </entry>
   <entry>
@@ -499,6 +499,23 @@ a^{b \mod{\phi(p)} + \phi(p)},&gcd(a,p) \neq 1,b\geq\phi(p)
       <tags>
         <tag>个人</tag>
         <tag>情绪</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reflection-on-my-learning-since-high-school</title>
+    <url>/2019/11/28/Reflection-on-my-learning-since-high-school/</url>
+    <content><![CDATA[<p>我是喜欢数学的，起码一直以来我是这么认为的。</p>
+<p>从小学开始，或者从幼儿园开始我的数学成绩一直名列前茅，谦虚点说，不算太差。我享受得到数学所能带给我的乐趣。那种冥思苦想之后的顿悟，仿佛大旱之后的甘霖。我的数学一直以来学得随意，会被技巧折服，而不会为解题去学习。我喜欢我不会的东西，就正如王小波先生写的“这就如和一位高明的棋手下棋，虽然自己总被击败，但也有机会领略妙招。”我期待着的仅仅是学习更多，所以我期待新的不会的东西。</p>
+<p>高中之后数学渐渐地使我没那么快乐了。数学没有变。我开始渐渐地关心数学之外的事情，我的成绩，我的排名，高考，大学。学习数学不再是一种精神上的愉悦，它给我带来了负担。曾经遇见一个不会的问题，会兴奋，会苦恼，会为自己又能学到新东西而开心。而当我越来越关注那个量化的量之后，每一道错题都令我害怕，每一个未曾见过的技巧使我慌张，每一次面对题目（做过的没做过的）都使我焦虑不安。我在害怕，我不害怕数学，我害怕数学之外的东西，害怕不能考高分。错误不再意味着学习，错误更多成了自我的否定。</p>
+<p>我曾可以一个晚上只做数学，而懊恼为什么会有其他的科目占用我的时间。现在我有大把的时间，但是我不愿意去看数学，做了题目不愿意去对答案。我不愿面对错误。而因此我必须去面对更多的错误，因为我只在原地踏步。如此，恶性循环。</p>
+<p>我觉得我有必要摆正一下自己的心态，不再去管那些有的没的糟糕的东西。没必要去争那个最前面的东西，或者说没必要带着这种想法去学习。我给自己设下设下保护伞——至少，你总会可以养活自己。希望可以多一些随意，少一些功利性的东西。竞争是必要的，但没必要太上心。</p>
+<blockquote>
+<p>“恕我直言，能够带来思想快乐的东西，只能是人类智慧至高的产物。比这再低一档的东西，只会给人带来痛苦；而这种低档货，就是出于功利的种种想法。”</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>个人</tag>
+        <tag>Reflection</tag>
       </tags>
   </entry>
 </search>
