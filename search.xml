@@ -1,6 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>python爬虫-2-requests库</title>
+    <url>/2021/01/25/python%E7%88%AC%E8%99%AB-2/</url>
+    <content><![CDATA[<a id="more"></a>
+<p>学习爬虫，最基础的便是<strong>模拟浏览器向服务器发出请求</strong>。</p>
+<h2 id="实例引入"><a class="markdownIt-Anchor" href="#实例引入"></a> 实例引入</h2>
+<p>模拟发送一个请求，把网页的源代码获取下来。</p>
+<p>可以利用<code>requests</code>库中的<code>get</code>方法来获取网页中的信息，为进一步提取所需信息做准备。<br />
+例如：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># coding=utf-8</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> io</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding=<span class="string">'utf8'</span>)</span><br><span class="line">url = <span class="string">'https://oi-wiki.org/'</span></span><br><span class="line">r = requests.get(url)</span><br><span class="line">print(r)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+<p>该代码会将<code>https://oi-wiki.org/</code>网页内容爬取并输出。</p>
+<h2 id="基本知识"><a class="markdownIt-Anchor" href="#基本知识"></a> 基本知识</h2>
+<h3 id="get请求"><a class="markdownIt-Anchor" href="#get请求"></a> <code>GET</code>请求</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># coding=utf-8</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">'http://httpbin.org/get'</span></span><br><span class="line">r = requests.get(url)</span><br><span class="line">print(r)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+<p>运行结果如下：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&lt;Response [200]&gt;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">"args"</span>: &#123;&#125;, </span><br><span class="line">  <span class="attr">"headers"</span>: &#123;</span><br><span class="line">    <span class="attr">"Accept"</span>: <span class="string">"*/*"</span>, </span><br><span class="line">    <span class="attr">"Accept-Encoding"</span>: <span class="string">"gzip, deflate"</span>, </span><br><span class="line">    <span class="attr">"Host"</span>: <span class="string">"httpbin.org"</span>, </span><br><span class="line">    <span class="attr">"User-Agent"</span>: <span class="string">"python-requests/2.24.0"</span>, </span><br><span class="line">    <span class="attr">"X-Amzn-Trace-Id"</span>: <span class="string">"Root=1-600e6a30-263a11523bc6ff097314f31d"</span></span><br><span class="line">  &#125;, </span><br><span class="line">  <span class="attr">"origin"</span>: <span class="string">"140.250.245.147"</span>, </span><br><span class="line">  <span class="attr">"url"</span>: <span class="string">"http://httpbin.org/get"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当然，我们也还可以在<code>GET</code>请求时增加一些参数，如下：<br />
+<code>http://httpbin.org/get?name=rain&amp;university=XDU</code>。</p>
+<p>在<code>get</code>方法中，我们可以指定<code>params</code>参数来达到传递参数的效果。代码如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># coding=utf-8</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">params = &#123;</span><br><span class="line">    <span class="string">'name'</span>: <span class="string">'rain'</span>,</span><br><span class="line">    <span class="string">'university'</span>: <span class="string">'XDU'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">url = <span class="string">'http://httpbin.org/get'</span></span><br><span class="line">r = requests.get(url, params=params)</span><br><span class="line">print(r)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+<p>结果如下：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&lt;Response [200]&gt;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">"args"</span>: &#123;</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"rain"</span>, </span><br><span class="line">    <span class="attr">"university"</span>: <span class="string">"XDU"</span></span><br><span class="line">  &#125;, </span><br><span class="line">  <span class="attr">"headers"</span>: &#123;</span><br><span class="line">    <span class="attr">"Accept"</span>: <span class="string">"*/*"</span>, </span><br><span class="line">    <span class="attr">"Accept-Encoding"</span>: <span class="string">"gzip, deflate"</span>, </span><br><span class="line">    <span class="attr">"Host"</span>: <span class="string">"httpbin.org"</span>, </span><br><span class="line">    <span class="attr">"User-Agent"</span>: <span class="string">"python-requests/2.24.0"</span>, </span><br><span class="line">    <span class="attr">"X-Amzn-Trace-Id"</span>: <span class="string">"Root=1-600e6b0c-13dea24830332ab92ef3cc91"</span></span><br><span class="line">  &#125;, </span><br><span class="line">  <span class="attr">"origin"</span>: <span class="string">"140.250.245.147"</span>, </span><br><span class="line">  <span class="attr">"url"</span>: <span class="string">"http://httpbin.org/get?name=rain&amp;university=XDU"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>观察发现，返回内容为<code>json</code>格式，我们可以直接利用<code>json()</code>方法将该文本转化为字典。如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">url = <span class="string">'http://httpbin.org/get'</span></span><br><span class="line">r = requests.get(url, params=params)</span><br><span class="line">dict = r.json()</span><br><span class="line">print(dict)</span><br></pre></td></tr></table></figure>
+<p>但是当返回格式不是<code>json</code>时，会抛出异常。</p>
+<h3 id="提取信息"><a class="markdownIt-Anchor" href="#提取信息"></a> 提取信息</h3>
+<p>我们可以利用<code>正则表达式</code>获取所虚信息，如：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">url = <span class="string">'http://static1.scrape.cuiqingcai.com/'</span></span><br><span class="line">r = requests.get(url, verify=<span class="literal">False</span>)</span><br><span class="line">print(r)</span><br><span class="line">pattern = re.compile(<span class="string">'&lt;h2.*?&gt;(.*?)&lt;/h2&gt;'</span>, re.S)</span><br><span class="line">tittle = re.findall(pattern, r.text)</span><br><span class="line"></span><br><span class="line">print(tittle)</span><br></pre></td></tr></table></figure>
+<p>结果为：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="string">'霸王别姬 - Farewell My Concubine'</span>, <span class="string">'这个杀手不太冷 - Léon'</span>, <span class="string">'肖申克的救赎 - The Shawshank Redemption'</span>, <span class="string">'泰坦尼克号 - Titanic'</span>, <span class="string">'罗马假日 - Roman Holiday'</span>, <span class="string">'唐伯虎点秋香 - Flirting Scholar'</span>, <span class="string">'乱世佳人 - Gone with the Wind'</span>, <span class="string">'喜剧之王 - The King of Comedy'</span>, <span class="string">'楚门的世界 - The Truman Show'</span>, <span class="string">'狮子王 - The Lion King'</span>]</span><br></pre></td></tr></table></figure>
+<p>代码参数的<code>verify</code>则是省去网站认证。</p>
+<h3 id="抓取二进制数据"><a class="markdownIt-Anchor" href="#抓取二进制数据"></a> 抓取二进制数据</h3>
+<p>图片、音频、视频这些文件本质上都是由二进制码组成，想要抓取它们，就要拿到它们的二进制数据。<br />
+例如我们想要抓取<code>github</code>的图标，网址为：<code>https://github.com/favicon.ico</code>。<br />
+代码如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">'https://github.com/favicon.ico'</span></span><br><span class="line">r = requests.get(url)</span><br><span class="line">print(r.text)</span><br><span class="line">print(r.content)</span><br></pre></td></tr></table></figure>
+<p>结果如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">:�������O    </span><br><span class="line"><span class="string">b'\x00\x00\x01\x00\x02\x00\x10\x10\x00\x00\x01\x00 \x00(\x05\x00\x00&amp;\x00\x00\x00</span></span><br></pre></td></tr></table></figure>
+<p>前者出现乱码，后者结果带有一个<code>b</code>，这代表是<code>byte</code>类型的数据。</p>
+<p>通过以下代码保存图片：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">url &#x3D; &#39;https:&#x2F;&#x2F;github.com&#x2F;favicon.ico&#39;</span><br><span class="line">r &#x3D; requests.get(url)</span><br><span class="line">with open(&#39;favicon.ico&#39;, &#39;wb&#39;) as f:</span><br><span class="line">    f.write(r.content)</span><br></pre></td></tr></table></figure>
+<h3 id="设置headers"><a class="markdownIt-Anchor" href="#设置headers"></a> 设置<code>headers</code></h3>
+<p>某些网站会检查请求的<code>headers</code>信息，在不设置<code>headers</code>时，某些网站可能拒绝访问。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">'user-agent'</span>:</span><br><span class="line">        <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '</span></span><br><span class="line">        <span class="string">'AppleWebKit/537.36 (KHTML, like Gecko) '</span></span><br><span class="line">        <span class="string">'Chrome/87.0.4280.141 Safari/537.36'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">url = <span class="string">'https://movie.douban.com/top250'</span></span><br><span class="line">r = requests.get(url, headers=headers)</span><br><span class="line">print(r)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+<p>当不设置<code>headers</code>时，豆瓣会拒绝访问。</p>
+<h3 id="post请求"><a class="markdownIt-Anchor" href="#post请求"></a> <code>POST</code>请求</h3>
+<p>利用<code>requests.post()</code>方法即可。</p>
+<h2 id="高级用法"><a class="markdownIt-Anchor" href="#高级用法"></a> 高级用法</h2>
+<h3 id="文件上传"><a class="markdownIt-Anchor" href="#文件上传"></a> 文件上传</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">files = &#123;<span class="string">'file'</span>: open(<span class="string">'favicon.ico'</span>, <span class="string">'rb'</span>)&#125;</span><br><span class="line">r = requests.post(<span class="string">'http://httpbin.org/post'</span>, files=files)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+<h3 id="cookies"><a class="markdownIt-Anchor" href="#cookies"></a> <code>Cookies</code></h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">'http://www.baidu.com'</span></span><br><span class="line">    r = requests.get(url)</span><br><span class="line">    print(r.cookies)</span><br><span class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> r.cookies.items():</span><br><span class="line">        print(key + <span class="string">": "</span> + value)</span><br></pre></td></tr></table></figure>
+<p>结果如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&lt;RequestsCookieJar[&lt;Cookie BDORZ=<span class="number">27315</span> <span class="keyword">for</span> .baidu.com/&gt;]&gt;</span><br><span class="line">BDORZ: <span class="number">27315</span></span><br></pre></td></tr></table></figure>
+<p>利用<code>Cookies</code>可以模拟登录：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">headers = &#123;</span><br><span class="line">  <span class="string">'Cookie'</span>: <span class="string">'Github中的Cookies'</span>,</span><br><span class="line">  <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '</span></span><br><span class="line">                <span class="string">'Chrome/87.0.4280.141 Safari/537.36'</span></span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">'https://github.com/'</span></span><br><span class="line">r = requests.get(url, headers=headers)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+<p>结果如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"user-login"</span> <span class="attr">content</span>=<span class="string">"XdBirdie"</span>&gt;</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>发现存在含有用户特征的信息，说明我们模拟了登录的状态。</p>
+<p><code>Cookie</code>还可以通过下面的方法设置：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">cookies = <span class="string">'Github中的Cookies'</span></span><br><span class="line">headers = &#123;</span><br><span class="line">  <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '</span></span><br><span class="line">  <span class="string">'Chrome/87.0.4280.141 Safari/537.36'</span></span><br><span class="line">&#125;</span><br><span class="line">jar = requests.cookies.RequestsCookieJar()</span><br><span class="line"><span class="keyword">for</span> cookie <span class="keyword">in</span> cookies.split(<span class="string">';'</span>):</span><br><span class="line">  key, value = cookie.split(<span class="string">'='</span>)</span><br><span class="line">  print(key, value)</span><br><span class="line">  jar.set(key, value)</span><br><span class="line">url = <span class="string">'https://github.com/'</span></span><br><span class="line">r = requests.get(url, cookies=jar, headers=headers)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+<p>可以达到同样的效果。</p>
+<h3 id="session维持"><a class="markdownIt-Anchor" href="#session维持"></a> <code>Session</code>维持</h3>
+<p>考虑如下代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">'http://httpbin.org/cookies'</span></span><br><span class="line">r = requests.get(url + <span class="string">'/set/number/12345678'</span>)</span><br><span class="line">r = requests.get(url)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+<p>输出结果为：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"cookies"</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>但是利用<code>Session</code>：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">url = <span class="string">'http://httpbin.org/cookies'</span></span><br><span class="line">s = requests.Session()</span><br><span class="line">s.get(url + <span class="string">'/set/number/12345678'</span>)</span><br><span class="line">r = s.get(url)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+<p>输出结果为：</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"cookies"</span>: &#123;</span><br><span class="line">    <span class="attr">"number"</span>: <span class="string">"12345678"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;e4</span><br></pre></td></tr></table></figure>
+<h3 id="ssl证书验证"><a class="markdownIt-Anchor" href="#ssl证书验证"></a> SSL证书验证</h3>
+<p>现在很多网站都要求使用<code>HTTPS</code>协议，但是有些网站可能并没有设置好<code>HTTPS</code>证书，或者网站的<code>HTTPS</code>证书不被认可。这时，这些网站可能就会出现<code>SSL</code>证书错误的提示。</p>
+<p>可以使用<code>verify</code>参数控制是否验证证书，如果将其设置为<code>False</code>，在请求时就不会再验证证书是否有效。否则默认值为<code>True</code>，会自动验证。</p>
+<h3 id="超时设置"><a class="markdownIt-Anchor" href="#超时设置"></a> 超时设置</h3>
+<p>当客户端或者服务器网络响应延迟较高甚至无响应时，为防止服务器不能及时响应，应该设置一个超市时间，当超出此事件还未响应时，报错。</p>
+<p>设置<code>timeout</code>参数即可。</p>
+<p>例如：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">'http://httpbin.org/get'</span></span><br><span class="line">r = requests.get(url, timeout=<span class="number">1</span>)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+<p>然而链接分为两个阶段，链接阶段(<code>connect</code>)和传送阶段(<code>read time</code>)，前面设置的<code>timeout</code>设置的时间是两段时间之和，也可以选择分别设置时间限。如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">'http://httpbin.org/get'</span></span><br><span class="line">r = requests.get(url, timeout=(<span class="number">0.4</span>, <span class="number">0.6</span>))</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+<p>如果想永久等待，可以直接将<code>timeout</code>设置为<code>None</code>，或者不设置，因为默认值为<code>None</code>。</p>
+<h3 id="身份认证"><a class="markdownIt-Anchor" href="#身份认证"></a> 身份认证</h3>
+<p>可以使用<code>requests</code>自带的身份认证功能，通过<code>auth</code>参数即可设置。</p>
+<p>例如：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> requests.auth <span class="keyword">import</span> HTTPBasicAuth</span><br><span class="line"></span><br><span class="line">url = <span class="string">'https://static3.scrape.cuiqingcai.com/'</span></span><br><span class="line">r = requests.get(url, auth=HTTPBasicAuth(<span class="string">'admin'</span>, <span class="string">'admin'</span>), verify=<span class="literal">False</span>)</span><br><span class="line">print(r.status_code)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+<p>但是相对繁琐，所以<code>python</code>提供了另一种方式进行身份认证：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">'https://static3.scrape.cuiqingcai.com/'</span></span><br><span class="line">r = requests.get(url, auth=(<span class="string">'admin'</span>, <span class="string">'admin'</span>), verify=<span class="literal">False</span>)</span><br><span class="line">print(r.status_code)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+<p><code>requests</code>还提供了其他认证方式，如<code>OAuth</code>认证，不过需要安装<code>oauth</code>包。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip3 install requests_oauthlib</span><br></pre></td></tr></table></figure>
+<h3 id="代理设置"><a class="markdownIt-Anchor" href="#代理设置"></a> 代理设置</h3>
+<p>对于大规模并且频繁的请求，网站可能会弹出验证码，或者跳转到登录认证页面，更有甚者可能会直接封禁客户端的<code>IP</code>，导致一定时间段内无法访问。<br />
+为了防止这种情况发生，需要设置代理来解决问题，这是就需要用到<code>proxies</code>参数。</p>
+]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python爬虫-1-爬虫概述</title>
+    <url>/2021/01/24/python%E7%88%AC%E8%99%AB-1/</url>
+    <content><![CDATA[<a id="more"></a>
+<h1 id="爬虫概述"><a class="markdownIt-Anchor" href="#爬虫概述"></a> 爬虫概述</h1>
+<p>爬虫就是<strong>获取网页</strong>并<strong>提取</strong>和<strong>保存信息</strong>的<strong>自动化程序</strong>。</p>
+<h2 id="爬虫基本原理"><a class="markdownIt-Anchor" href="#爬虫基本原理"></a> 爬虫基本原理</h2>
+<ul>
+<li><strong>获取网页</strong>
+<ul>
+<li><strong>获取网页</strong>，就是获取网页的源代码</li>
+<li>源代码中包含网页的部分有用信息，将源代码获取下来，就可以从中提取所需信息</li>
+<li>最关键的部分是<strong>构造一个请求并发送个服务器</strong>，<strong>接收响应并解析</strong></li>
+</ul>
+</li>
+<li><strong>提取信息</strong>
+<ul>
+<li>根据网页的结构</li>
+<li>存在根据网页节点属性，CSS选择器或XPath提取网页信息的库</li>
+<li>例: <code>Beautiful Soup</code>，<code>pyquery</code>，<code>lxml</code>等</li>
+<li>利用这些库可以快速高效地从中提取网页信息</li>
+</ul>
+</li>
+<li><strong>保存信息</strong>
+<ul>
+<li>保存为<code>TXT</code>文本或<code>JSON</code>文本</li>
+<li>保存到数据库，如<code>MySQL</code>和<code>MongoDB</code>等</li>
+<li>保存至远程服务器，如借助<code>SFTP</code>进行操作</li>
+</ul>
+</li>
+<li><strong>自动化程序</strong>
+<ul>
+<li>当数据量非常大或者操作非常繁复时, 需要借助程序</li>
+<li><code>爬虫</code>就是代替我们工作的自动化程序</li>
+<li>可以在抓取过程中进行各种异常处理, 错误重试等操作确保爬虫高效运行</li>
+</ul>
+</li>
+<li><strong>抓取的数据</strong>
+<ul>
+<li>常规网页–<code>HTML</code>代码</li>
+<li>API–<code>JSON</code>字符串</li>
+<li>多媒体文件</li>
+<li>只要能在浏览器里能访问到, 都可以抓取</li>
+</ul>
+</li>
+</ul>
+<p>而如今更多网页采用<code>Ajax</code>，前端模块化工具来构建，整个网页可能都是由<code>JavaScript</code>渲染出来的，<strong>原始的<code>HTML</code>代码就是一个空壳</strong>。</p>
+<p>如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>This is a Demo<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"app.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>浏览器解析网页时，会加载<code>HTML</code>内容，然后请求<code>app.js</code>文件并执行代码，<code>JS</code>文件会改变<code>HTML</code>中的节点并向网页添加内容，最后得到完成的页面。</p>
+<p>而用<code>urlib</code>或者<code>request</code>库去请求网页时，只会加载<code>HTML</code>文件，而不会执行<code>JavaScript</code>，所以我们只能得到一个空壳，而无法得到完整页面。</p>
+<p>可以使用<code>Selenium</code>、<code>Splash</code>类似的库来模拟<code>JavaScript</code>渲染。</p>
+<h2 id="基础探究session与cookies"><a class="markdownIt-Anchor" href="#基础探究session与cookies"></a> 基础探究，<code>Session</code>与<code>Cookies</code></h2>
+<p>###　<strong>静态网页</strong>和<strong>动态网页</strong></p>
+<ul>
+<li><strong>静态网页</strong>
+<ul>
+<li>静态网页由<code>HTML</code>代码编写，文字图片等内容均通过写好的<code>HTML</code>代码指定</li>
+<li>加载速度快，编写简单</li>
+<li>但是可维护性差，不能灵活多变地显示内容、个性化定制等</li>
+</ul>
+</li>
+<li><strong>动态网页</strong>
+<ul>
+<li>动态解析<code>URL</code>中参数的变化</li>
+<li>关联数据库并动态呈现不同的页面内容，灵活多变</li>
+<li>可以能由<code>JSP</code>、<code>PHP</code>、<code>Python</code>等语言编写</li>
+<li>可以实现用户登录和注册的功能</li>
+</ul>
+</li>
+</ul>
+<h3 id="session与cookies"><a class="markdownIt-Anchor" href="#session与cookies"></a> <code>Session</code>与<code>Cookies</code></h3>
+<p><code>HTTP</code>具有<code>无状态</code>的特点，是指<code>HTTP</code>协议对事务处理是没有记忆能力的，也就是说服务器并不知道客户端是什么状态。这就意味着如果后续要处理前面的信息，必须<strong>重传</strong>。这将导致需要额外传递一些前面的重复请求，才能获取后续响应。降低传输效率。</p>
+<p>所以，我们需要能够保持<code>HTTP</code>链接状态的技术——<code>Session</code>和<code>Cookies</code>。</p>
+<ul>
+<li>
+<p><code>Session</code></p>
+<ul>
+<li>网站的服务器</li>
+<li>“有始有终的一系列动作/消息”</li>
+<li>存储特定用户<code>Session</code>所需的属性和配置信息</li>
+</ul>
+</li>
+<li>
+<p><code>Cookies</code></p>
+<ul>
+<li>浏览器端</li>
+<li>某些网站为了辨别用户身份、继续<code>Session</code>跟踪而储存在用户本地终端上的数据</li>
+<li>下次放问网页时会自动附带并发给服务器</li>
+<li>服务器会识别<code>Cookies</code>并鉴定出用户并判断用户状态</li>
+</ul>
+</li>
+<li>
+<p><code>会话Cookie</code>，将<code>Cookie</code>放在浏览器内存里，浏览器关闭后该<code>Cookie</code>失效</p>
+</li>
+<li>
+<p><code>持久Cookie</code>，将<code>Cookie</code>保存到客户端的硬盘中，下次还可以继续使用，用于长久保持用户的登录状态</p>
+</li>
+</ul>
+<p>严格来说，并没有<code>会话Cookie</code>和<code>持久Cookie</code>之分，只是由<code>Cookie</code>的<code>Max Age</code>或<code>Expires</code>字段决定了过期的时间。</p>
+]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LINGO的基本使用</title>
     <url>/2021/01/20/LINGO%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="lingo基础"><a class="markdownIt-Anchor" href="#lingo基础"></a> Lingo基础</h1>
